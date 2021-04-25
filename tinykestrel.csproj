@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RuntimeIdentifier>osx.11.0-x64</RuntimeIdentifier>
+    <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
+    <IlcOptimizationPreference>Size</IlcOptimizationPreference>
+    <IlcDisableReflection>true</IlcDisableReflection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel" />
+    <Reference Include="Microsoft.AspNetCore.Hosting" />
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions" />
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Core" />
+    <Reference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets" />
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions" />
+    <Reference Include="Microsoft.AspNetCore.Connections.Abstractions" />
+    <Reference Include="Microsoft.AspNetCore.Http.Features" />
+
+    <PackageReference Include="System.Data.Odbc" Version="5.0.0" />
+    <PackageReference Include="System.IO.Pipelines" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="5.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <!--<PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0-preview2.21106.5" />-->
+
+    <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="6.0.0-*" />
+
+    <Content Include="certificate.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+
+    <Compile Remove="kestrel\**" />
+
+  </ItemGroup>
+
+</Project>

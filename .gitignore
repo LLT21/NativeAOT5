@@ -1,0 +1,10 @@
+# Cake - Uncomment if you are using it
+# tools/
+*.pdb
+**/Output/
+**/DbObjects/
+**/bin/
+**/obj/
+**/deploy/
+.DS_Store
+img-appmpower
