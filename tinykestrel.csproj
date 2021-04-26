@@ -18,6 +18,8 @@
     <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions" />
     <Reference Include="Microsoft.AspNetCore.Connections.Abstractions" />
     <Reference Include="Microsoft.AspNetCore.Http.Features" />
+    <Reference Include="Microsoft.AspNetCore.Http" />
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions" />
 
     <PackageReference Include="System.Data.Odbc" Version="5.0.0" />
     <PackageReference Include="System.IO.Pipelines" Version="5.0.0" />
